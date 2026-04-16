@@ -1,0 +1,9 @@
+{
+  "name": "kiish",
+  "version": "1.0.0",
+  "description": "KIISH — Keep Iterating In Smart Harmony. An autonomous build loop that works on your project until the job is done, one step at a time.",
+  "author": {
+    "name": "Jeshrum",
+    "email": "olukungajeshrum@gmail.com"
+  }
+}
