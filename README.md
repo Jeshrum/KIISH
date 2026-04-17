@@ -118,25 +118,26 @@ Stops the loop immediately. Everything KIISH built so far is kept — nothing is
 
 **Be specific in your task.** The more detail you give, the better the result:
 
-❌ Vague:
+❌ Too vague — KIISH won't know when it's done:
 ```
 /kiish Make a website
 ```
 
-✅ Specific:
+✅ Clear and specific — KIISH knows exactly what to build and when to stop:
 ```
-/kiish Build a landing page for a productivity app. It should have a hero section,
-3 feature cards, a pricing table with 2 tiers, and a contact form.
-Use Tailwind CSS. Output <promise>COMPLETE</promise> when all sections are done.
+/kiish Build a website for my bakery business. It needs a homepage,
+a menu page showing our products, and a contact page with our address and phone number.
+Make it look clean and professional. --done-when 'COMPLETE' --max-rounds 20
+```
+
+Think of it like briefing a contractor. The more clearly you describe what you want, the better the outcome.
+
+**Use a finish signal so KIISH knows when it's truly done.** Add `--done-when` with a simple phrase, and KIISH will only stop when it's confident the work is complete:
+
+```
+/kiish Build a sign-up page where users can create an account with their email and password.
+It should have a form, proper error messages, and look polished.
 --done-when 'COMPLETE' --max-rounds 20
-```
-
-**Use a finish signal for quality control.** When you include a `--done-when` phrase, Claude will only stop when it's confident the work meets that bar:
-
-```
-/kiish Build a login system with email/password auth.
-All tests must pass. Output <promise>ALL TESTS PASSING</promise> when done.
---done-when 'ALL TESTS PASSING' --max-rounds 30
 ```
 
 ---
@@ -187,8 +188,8 @@ Yes — web apps, mobile apps, scripts, APIs, Chrome extensions, anything Claude
 
 ## Credits
 
-KIISH is built on the [Ralph Loop technique](https://ghuntley.com/ralph/) by Geoffrey Huntley, originally implemented as the Ralph Loop plugin by Anthropic.
+KIISH was designed and built by [Jeshrum](https://github.com/Jeshrum).
 
-KIISH is a rebranded, redesigned, and extended version — focused on making autonomous AI loops accessible to everyone.
+The concept of autonomous iterative AI loops has been explored in the developer community, and KIISH brings that idea to life in a way that works for everyone — not just engineers.
 
-Built by [Jeshrum](https://github.com/Jeshrum) · Licensed under Apache 2.0
+Licensed under Apache 2.0
